@@ -19,8 +19,9 @@ import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
 // import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
+import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
 import Image from '@ckeditor/ckeditor5-image/src/image';
-import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
+// import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
@@ -33,10 +34,13 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
+import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperties';
 import Font from '@ckeditor/ckeditor5-font/src/font';
 import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter';
 import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -54,11 +58,11 @@ ClassicEditor.builtinPlugins = [
 	Superscript,
 	BlockQuote,
 	CKFinder,
-	// EasyImage,
+	CodeBlock,
 	Heading,
+	HorizontalLine,
 	Image,
 	ImageResize,
-	ImageCaption,
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
@@ -70,6 +74,8 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
+	TableProperties,
+	TableCellProperties,
 	Font,
 	Base64UploadAdapter,
 	Highlight,
@@ -107,24 +113,50 @@ ClassicEditor.defaultConfig = {
 			'superscript',
 			'insertTable',
 			'mediaEmbed',
-			'blockQuote'
+			'blockQuote',
+			'horizontalLine',
+			'codeBlock'
 		]
 	},
 	image: {
 		toolbar: [
+			'imageStyle:alignLeft',
 			'imageStyle:full',
-			'imageStyle:side',
+			'imageStyle:alignRight',
 			'|',
 			'imageTextAlternative'
+		],
+		styles: [
+			// This option is equal to a situation where no style is applied.
+			'full',
+
+			// This represents an image aligned to the left.
+			'alignLeft',
+
+			// This represents an image aligned to the right.
+			'alignRight'
 		]
 	},
 	table: {
 		contentToolbar: [
 			'tableColumn',
 			'tableRow',
-			'mergeTableCells'
-		]
+			'mergeTableCells',
+			'tableProperties',
+			'tableCellProperties'
+		],
+
+		// Configuration of the TableProperties plugin.
+		tableProperties: {
+			// ...
+		},
+
+		// Configuration of the TableCellProperties plugin.
+		tableCellProperties: {
+			// ...
+		}
 	},
+
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
 };
