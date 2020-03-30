@@ -5,7 +5,6 @@
 
 // The editor creator to use.
 import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
-
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter';
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
@@ -17,11 +16,11 @@ import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
 import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
-// import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
+import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
 import Image from '@ckeditor/ckeditor5-image/src/image';
-// import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
+import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
@@ -49,6 +48,7 @@ ClassicEditor.builtinPlugins = [
 	Essentials,
 	UploadAdapter,
 	Autoformat,
+	EasyImage,
 	Bold,
 	Italic,
 	Underline,
@@ -65,6 +65,7 @@ ClassicEditor.builtinPlugins = [
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
+	ImageCaption,
 	Indent,
 	Link,
 	List,
