@@ -45,7 +45,6 @@ import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
-// MAKE SURE package.json versions are correct (v16.00 as of creation)
 ClassicEditor.builtinPlugins = [
 	Essentials,
 	UploadAdapter,
@@ -127,13 +126,8 @@ ClassicEditor.defaultConfig = {
 			'imageTextAlternative'
 		],
 		styles: [
-			// This option is equal to a situation where no style is applied.
 			'full',
-
-			// This represents an image aligned to the left.
 			'alignLeft',
-
-			// This represents an image aligned to the right.
 			'alignRight'
 		]
 	},
@@ -145,18 +139,8 @@ ClassicEditor.defaultConfig = {
 			'tableProperties',
 			'tableCellProperties'
 		],
-
-		// Configuration of the TableProperties plugin.
-		tableProperties: {
-			// ...
-		},
-
-		// Configuration of the TableCellProperties plugin.
-		tableCellProperties: {
-			// ...
-		}
+		tableProperties: {},
+		tableCellProperties: {}
 	},
-
-	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
 };
