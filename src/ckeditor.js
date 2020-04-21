@@ -40,6 +40,7 @@ import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64u
 import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
+import Mention from '@ckeditor/ckeditor5-mention/src/mention';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -79,7 +80,8 @@ ClassicEditor.builtinPlugins = [
 	Font,
 	Base64UploadAdapter,
 	Highlight,
-	Alignment
+	Alignment,
+	Mention
 ];
 
 // Editor configuration.

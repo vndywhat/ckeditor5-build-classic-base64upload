@@ -1,6 +1,6 @@
 {
   "name": "@jgrayfibersmith/ckeditor5-build-classic-full-with-base64-upload",
-  "version": "20.0.0",
+  "version": "21.0.0",
   "description": "The classic editor build of CKEditor 5 – the best browser-based rich text editor.",
   "keywords": [
     "ckeditor5-build",
@@ -100,6 +100,7 @@
     }
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-mention": "^18.0.0",
     "yarn": "^1.22.4"
   }
 }
