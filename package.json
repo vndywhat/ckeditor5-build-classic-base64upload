@@ -101,6 +101,7 @@
   },
   "dependencies": {
     "@ckeditor/ckeditor5-mention": "^18.0.0",
+    "@vndywhat/ckeditor5-spoiler": "^18.0.0",
     "yarn": "^1.22.4"
   }
 }

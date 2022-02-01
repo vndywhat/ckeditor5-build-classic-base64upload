@@ -41,6 +41,7 @@ import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
 import Mention from '@ckeditor/ckeditor5-mention/src/mention';
+import { Spoiler } from '@vndywhat/ckeditor5-spoiler';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -81,7 +82,8 @@ ClassicEditor.builtinPlugins = [
 	Base64UploadAdapter,
 	Highlight,
 	Alignment,
-	Mention
+	Mention,
+	Spoiler
 ];
 
 // Editor configuration.
@@ -117,7 +119,8 @@ ClassicEditor.defaultConfig = {
 			'mediaEmbed',
 			'blockQuote',
 			'horizontalLine',
-			'codeBlock'
+			'codeBlock',
+			'spoiler'
 		]
 	},
 	link: {
