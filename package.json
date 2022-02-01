@@ -1,6 +1,6 @@
 {
   "name": "@vndywhat/ckeditor5-build-classic-full-with-base64-upload-and-spoiler",
-  "version": "22.0.0",
+  "version": "22.0.1",
   "description": "The classic editor build of CKEditor 5 – the best browser-based rich text editor.",
   "keywords": [
     "ckeditor5-build",
@@ -49,6 +49,7 @@
     "@ckeditor/ckeditor5-media-embed": "^18.0.0",
     "@ckeditor/ckeditor5-paragraph": "^18.0.0",
     "@ckeditor/ckeditor5-paste-from-office": "^18.0.0",
+    "@ckeditor/ckeditor5-remove-format": "^18.0.0",
     "@ckeditor/ckeditor5-table": "^18.0.0",
     "@ckeditor/ckeditor5-theme-lark": "^18.0.0",
     "eslint": "^5.5.0",
